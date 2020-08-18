@@ -1,2 +1,42 @@
-# tmplt-basic-lisp
-A template for a basic Common Lisp project.
+# Basic Lisp Project
+## What
+
+Basic structure of a Lisp project.
+
+* It uses asdf + quicklisp to manage dependencies.
+
+## Setup
+
+* Copy the project to a new directory.
+* Rename the directory, .asdf file, system name in the asdf to the same name. The package names can differ.
+* Create symbolic links in ~/quicklisp/local-projects/ for asdf and quicklisp to find your project by name.
+  * ln -s REALDIR projname
+
+## Run it
+
+Make sure that quicklisp is loaded in your lisp environment. If not do this step explicitly (eg. Lispworks personal edition).
+
+    (load "~/quicklisp/setup")
+
+Then load the system and execute some code
+
+​    (ql:quickload "tmplt-basic-lisp")
+​    (basic-lisp:run)
+
+## Unit tests
+
+    (asdf:test-system "tmplt-basic-lisp")
+    of
+    (asdf:operate 'asdf:test-op :tmplt-basic-lisp)
+
+## Structure Notes
+
+* The asdf file contains two system definitions, a main definition and a test definition. The test definition is hierarchically structured by using a slash / in the name. In this way asdf can find the definition without needing a directory or .asdf file with the same name.
+* src/ contains the sources of the main package.
+* t/ contains the sources for the unit tests.
+
+## References 
+
+* Ref. https://www.common-lisp.net/project/asdf/asdf.html#Predefined-operations-of-ASDF
+* (asdf:operate 'asdf:operation-name :system-name {operation-options ...})
+* Ref. https://common-lisp.net/project/asdf/

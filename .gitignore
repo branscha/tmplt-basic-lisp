@@ -1,3 +1,4 @@
+# Compiled Lisp files
 *.FASL
 *.fasl
 *.lisp-temp
@@ -15,3 +16,8 @@
 *.sx32fsl
 *.wx64fsl
 *.wx32fsl
+*.64ufasl
+*.32ufasl
+
+# Backup files
+*~
