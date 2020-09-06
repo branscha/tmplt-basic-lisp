@@ -26,7 +26,7 @@ Then load the system and execute some code
 ## Unit tests
 
     (asdf:test-system :tmplt-basic-lisp)
-    of
+    or
     (asdf:operate 'asdf:test-op :tmplt-basic-lisp)
 
 ## Structure Notes
@@ -40,3 +40,5 @@ Then load the system and execute some code
 * Ref. https://www.common-lisp.net/project/asdf/asdf.html#Predefined-operations-of-ASDF
 * (asdf:operate 'asdf:operation-name :system-name {operation-options ...})
 * Ref. https://common-lisp.net/project/asdf/
+
+LocalWords:  src ASDF asdf

@@ -2,7 +2,5 @@
 
 (setq *print-failures* t)
 
-(lisp-unit:define-test runnertest
-  (lisp-unit:assert-equal "Ck1VqNd45QIvq3AZd8XYQLvEhtA=" (basic-lisp:run)))
-
-
+(define-test runnertest
+  (assert-equal "Ck1VqNd45QIvq3AZd8XYQLvEhtA=" (run)))
